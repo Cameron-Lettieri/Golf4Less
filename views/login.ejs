@@ -1,0 +1,51 @@
+<html>
+<%- include("./partials/head.ejs") %>
+<div class="secondPage">
+    <h1>Login</h1>
+
+    <form action="/shop" method="GET">
+        <div class="col-3"><center><button class="btn btn-success" id="Rbutton"> Return</button></center></div>
+    </form>
+
+    <div id="liveAlertPlaceholder"></div>
+
+
+    <div class="form">
+        <div class="col-2"></div>
+        <div class="col-12">
+            <div id="liveAlertPlaceholder"></div>
+            <form action="/login" method="POST" class="row g-3" id="checkout-form">
+                <center><div class="col-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="inputEmail4">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Must be like, "abc@xyz.efg"
+                    </div>
+                </div></center>
+                <center><div class="col-6">
+                    <label for="inputAddress" class="form-label">Password</label>
+                    <input type="text" name="password" class="form-control" id="inputAddress">
+                    
+                </div></center>
+                <div class="col-12">
+                    <center><button  type = "submit" form = "checkout-form" class="order btn btn-success" id = "order"> Login</button>
+                    </center>
+                </div>
+            </form>
+            <div class="col-12">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-2">
+    <br></br>
+</div>
+</div>
+<div>
+    <%- include("./partials/footer.ejs") %>
+</div>
+</html>

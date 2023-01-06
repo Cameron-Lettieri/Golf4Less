@@ -1,0 +1,47 @@
+<html>
+    <%- include(currentHead) %>
+<div class="section">
+    <div>
+        <p></p>
+    </div>
+    <div>
+        <h1>Welcome to Golf4Less</h1>
+    </div>
+    <div class="section1">
+        <div class="img-slider">
+            <img src="golf1.png"
+                 alt="" class="img">
+            <img src="golf2.png"
+                 alt="" class="img">
+            <img src="golf3.png"
+                 alt="" class="img">
+            <img src="golf4.png"
+                 alt="" class="img">
+            <img src="golf5.png"
+                 alt="" class="img">
+            <img src="golf6.png"
+                 alt="" class="img">
+            <img src="golf7.png"
+                 alt="" class="img">
+            <img src="golf8.png"
+                 alt="" class="img">
+        </div>
+    </div>
+<div class="text-center">
+    <p>Create an Account to get Started!</p>
+    <form action="/createAccount" method="GET">
+        <button class="btn btn-success" id="Cbutton">Create an Account</button>
+    </form>
+</div>
+</div>
+<div>
+    <p></p>
+</div>
+<div>
+    <%- include("./partials/footer.ejs") %>
+</div>
+
+<script type="text/javascript" src="/public/script.js"></script>
+
+
+</html>

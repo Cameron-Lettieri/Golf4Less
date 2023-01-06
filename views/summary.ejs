@@ -1,0 +1,71 @@
+<html>
+<%- include(currentHead) %>
+<div class="container" >
+
+  <div class="col-2">
+    <br></br>
+</div>
+    <div class="thirdpage row">
+        <div class = "col-4">
+
+        </div>
+        <div class = "col-8">
+          <div class="card" style="width: 25rem;">
+            <div class="card-body">
+              <h5 class="card-title">Order summary</h5>
+              <p class="card-text">Here is a summary of your order.</p>
+              <table class="table">
+                <thead>
+                  <th> Item</th>
+                  <th> Quantity</th>
+                  <th> Price</th>
+                  <th> Tax</th>
+                  <th> </th>
+                </thead>
+                <tbody>
+                    <% if (order.length > 0) { %>
+                      <% var total = 0%>
+                    <% order.forEach(cart => { %>
+                    <tr>
+                      <td><img src="<%= cart.name %>.png" alt="Trulli" width="100" height="100"></td>
+                      <td><%= cart.amount %></td>
+                      <td><%= cart.price %></td>
+                      <td><%= cart.tax %></td>
+                      <% total += cart.total %>
+                    </tr>
+                    <% }) %>
+                    <% }%>
+                </tbody>
+              
+              </table>
+              <p class="card-text"><b>Total Cost: $<%= total %></b></p>
+              <p><b>Email: </b><%= info.email %></p>
+              <p><b>Name: </b><%= info.name %></p>
+              <p><b>Address: </b><%= info.address %></p>
+              <p><b>Card: </b><%= info.card %></p>
+            <ul class="list-group list-group-flush">
+
+            </ul>
+            <form action="/shop" method="GET">
+              <Button><i class="bi-arrow-left-circle"></i>Return</Button>
+            </form>
+          </div>
+          
+        </div>
+        
+        <div class = "col-2">
+
+        </div>
+        
+
+    </div>
+</div>
+<div class="col-2">
+  <br></br>
+</div>
+
+</body>
+<div>
+    <%- include("./partials/footer.ejs") %>
+</div>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<%- include("./partials/head.ejs") %>
+<div class="secondPage">
+    <h1>Create Account</h1>
+
+    <form action="/shop" method="GET">
+        <div class="col-3"><center><button class="btn btn-success" id="Rbutton"> Return</button></center></div>
+    </form>
+
+    <div id="liveAlertPlaceholder"></div>
+
+
+    <div class="form">
+        <div class="col-2"></div>
+        <center><div class="col-6">
+            <div id="liveAlertPlaceholder"></div>
+            <form action="/createAccount" method="POST" class="row g-3" id="checkout-form">
+                <div class="col-md-6">
+                    <label for="inputName" class="form-label">Full Name</label>
+                    <input type="text" name="name" class="form-control" id="inputName">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Must be like, "John Doe"
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="inputEmail4">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Must be like, "abc@xyz.efg"
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Password</label>
+                    <input type="text" name="password" class="form-control" id="inputAddress">
+                </div>
+                <div class="col-12">
+                    <button  type = "submit" form = "checkout-form" class="order btn btn-success" id = "order"> Create</button>
+                  </div>
+            </form>
+            <div class="col-12">
+                
+            </div>
+        </div></center>
+    </div>
+</div>
+<div class="col-2">
+    <br></br>
+</div>
+</div>
+<footer>
+    <%- include("./partials/footer.ejs") %>
+</footer>
+</html>

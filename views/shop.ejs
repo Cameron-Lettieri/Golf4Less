@@ -1,0 +1,146 @@
+<html>
+<%- include(currentHead) %>
+<div class="container">
+    <div class="firstPage">
+        <section>
+
+            <div class="section">
+                <div class="section1">
+                </div>
+                <div class="section2">
+                    <div class="col-2">
+                        <br></br>
+                    </div>
+                    <div class="search">
+                        <input type="text" class="form-control" id="inputS">
+                        <button class="btn btn-success" id="Sbutton"> Search</button>
+                        
+                    </div>
+                    <div class="container">
+                        <form action="/shop" method="POST" id="myForm">
+                            <div class="golf1">
+                                <div class="img img1"><img
+                                            src="golf1.png"
+                                            alt=""></div>
+                                <div class="name">Strata Ultimate Men's 14-set</div>
+                                <div class="price">$499.99</div>
+                                <div class="info">Strata Ultimate is designed for ultimate distance and ultimate
+                                    performance with modernized golf technology to cover you from tee to green. Set
+                                    Includes: Driver, 3 Wood, 4 & 5 Hybrid, 6 - 9 Iron, PW & SW, Putter, Stand Bag, 4
+                                    Headcovers.
+                                </div>
+                                <input id=numGolf1 type=number min=0 max= <%= stock1 %> name="numGolf1" placeholder="0">
+                                <button onclick="increment1()">+</button>
+                                <button onclick="decrement1()">-</button>
+                                <div class="stock">
+                                    <b>Available: <%= stock1 %></b> 
+                                </div>
+                            </div>
+                            <div class="golf2">
+                                <div class="img img2"><img
+                                            src="golf2.png"
+                                            alt=""></div>
+                                <div class="name">Strata Ultimate Men's 12-set</div>
+                                <div class="price">$399.99</div>
+                                <div class="info">Strata Ultimate is designed for ultimate distance and ultimate
+                                    performance with modernized golf technology to cover you from tee to green. Set
+                                    Includes: Driver, 3 Wood, 4 & 5 Hybrid, 6 - 9 Iron, Putter, Stand Bag, 4 Headcovers.
+                                </div>
+                                <input id=numGolf2 type=number min=0 max=<%= stock2 %> placeholder="0" name="numGolf2">
+                                <button onclick="increment2()">+</button>
+                                <button onclick="decrement2()">-</button>
+                                <div class="stock">
+                                    <b>Available: <%= stock2 %></b> 
+                                </div>
+                            </div>
+                            <div class="golf3">
+                                <div class="img img3"><img
+                                            src="golf3.png"
+                                            alt=""></div>
+                                <div class="name">Strata Ultimate Women's 14-set</div>
+                                <div class="price">$499.99</div>
+                                <div class="info">Strata Ultimate is designed for ultimate distance and ultimate
+                                    performance with modernized golf technology to cover you from tee to green. Set
+                                    Includes: Driver, 3 Wood, 4 & 5 Hybrid, 6 - 9 Iron, PW & SW, Putter, Stand Bag, 4
+                                    Headcovers.
+                                </div>
+                                <input id=numGolf3 type=number min=0 max=<%= stock3 %> placeholder="0" name="numGolf3">
+                                <button onclick="increment3()">+</button>
+                                <button onclick="decrement3()">-</button>
+                                <div class="stock">
+                                    <b>Available: <%= stock3 %></b> 
+                                </div>
+                            </div>
+                            <div class="golf4">
+                                <div class="img img1"><img
+                                            src="golf4.png"
+                                            alt=""></div>
+                                <div class="name">Strata Ultimate Women's 12-set</div>
+                                <div class="price">$399.99</div>
+                                <div class="info">Strata Ultimate is designed for ultimate distance and ultimate
+                                    performance with modernized golf technology to cover you from tee to green. Set
+                                    Includes: Driver, 3 Wood, 4 & 5 Hybrid, 6 - 9 Iron, Putter, Stand Bag, 4 Headcovers.
+                                </div>
+                                <input id=numGolf4 type=number min=0 max=<%= stock4 %> placeholder="0" name="numGolf4">
+                                <button onclick="increment4()">+</button>
+                                <button onclick="decrement4()">-</button>
+                                <div class="stock">
+                                    <b>Available: <%= stock4 %></b> 
+                                </div>
+                            </div>
+                            <div class="golf5">
+                                <div class="img img1"><img
+                                            src="golf5.png"
+                                            alt=""></div>
+                                <div class="name">Reva Men's 14-set</div>
+                                <div class="price">$599.99</div>
+                                <div class="info">Reva is designed for ultimate distance and ultimate performance with
+                                    modernized golf technology to cover you from tee to green. Set Includes: Driver, 3
+                                    Wood, 4 & 5 Hybrid, 6 - 9 Iron, PW & SW, Putter, Stand Bag, 4 Headcovers.
+                                </div>
+                                <input id=numGolf5 type=number min=0 max=<%= stock5 %> placeholder="0" name="numGolf5">
+                                <button onclick="increment5()">+</button>
+                                <button onclick="decrement5()">-</button>
+                                <div class="stock">
+                                    <b>Available: <%= stock5 %></b> 
+                                </div>
+                            </div>
+                            <div class="golf6">
+                                <div class="img img1"><img
+                                            src="golf6.png"
+                                            alt=""></div>
+                                <div class="name">Reva Men's 12-set</div>
+                                <div class="price">$499.99</div>
+                                <div class="info">Reva is designed for ultimate distance and ultimate performance with
+                                    modernized golf technology to cover you from tee to green. Set Includes: Driver, 3
+                                    Wood, 4 & 5 Hybrid, 6 - 9 Iron, Putter, Stand Bag, 4 Headcovers.
+                                </div>
+                                <input id=numGolf6 type=number min=0 max=<%= stock6 %> placeholder="0" name="numGolf6">
+                                <button onclick="increment6()">+</button>
+                                <button onclick="decrement6()">-</button>
+                                <div class="stock">
+                                    <b>Available: <%= stock6 %></b> 
+                                </div>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+                <form action="/checkout" method="GET">
+                    <center><button class="btn btn-success" id="Cbutton"> Checkout</button></center>
+                </form>
+            </div>
+    </div>
+</div>
+</section>
+</div>
+<div class="col-2">
+    <br></br>
+</div>
+<div>
+    <%- include("./partials/footer.ejs") %>
+</div>
+
+<script type="text/javascript" src="/public/script.js"></script>
+
+
+</html>cd 319

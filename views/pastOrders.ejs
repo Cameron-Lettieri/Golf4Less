@@ -1,0 +1,55 @@
+<html>
+<%- include(currentHead) %>
+<div class="secondPage">
+    
+
+    
+
+    <div id="liveAlertPlaceholder"></div>
+
+
+    <div class="form">
+        <div class="row g-3">
+            
+            <div class="col-2"></div>
+            <div class="col-8">
+                <h1>Past Orders</h1>
+                <table class="table">
+                    <thead>
+                      <th> Item</th>
+                      <th> Quantity</th>
+                      <th> Price</th>
+                      <th> Tax</th>
+                      <th> </th>
+                    </thead>
+                    <tbody>
+                        <% if (pastOrders.length > 0) { %>
+                          <% var total = 0%>
+                        <% pastOrders.forEach(cart => { %>
+                        <tr>
+                          <td><img src="<%= cart.name %>.png" alt="Trulli" width="100" height="100"></td>
+                          <td><%= cart.amount %></td>
+                          <td><%= cart.price %></td>
+                          <td><%= cart.tax %></td>
+                          <% total += cart.total %>
+                        </tr>
+                        <% }) %>
+                        <% }%>
+                    </tbody>
+                  
+                  </table>
+                
+            </div>
+        </div>
+        
+    </div>
+</div>
+<div class="col-2">
+    <br></br>
+</div>
+
+</div>
+<div>
+    <%- include("./partials/footer.ejs") %>
+</div>
+</html>
